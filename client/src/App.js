@@ -10,7 +10,7 @@ function App() {
 axios.defaults.withCredentials = true;
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('https://student-registration-api-phi.vercel.app/register', {name, email, password})
+    axios.post('http://student-registration-api-phi.vercel.app/register', {name, email, password})
     .then(result => console.log(result))
     .catch(err => console.log(err))
   }
