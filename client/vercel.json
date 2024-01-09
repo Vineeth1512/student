@@ -1,0 +1,6 @@
+{
+    "rewrites": [
+      { "source": "/register", "destination": "https://student-registration-api-phi.vercel.app/register" }
+    ]
+  }
+  
