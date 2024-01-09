@@ -7,7 +7,7 @@ function App() {
   const [name, setName] = useState()
   const [email, setEmail] = useState()
   const [password, setPassword] = useState()
-axios.defaults.withCredentials = true;
+axios.defaults.withCredentials = false;
   const handleSubmit = (e) => {
     e.preventDefault();
     axios.post('https://student-registration-api-phi.vercel.app/register', {name, email, password})
