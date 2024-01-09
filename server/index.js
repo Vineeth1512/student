@@ -16,7 +16,7 @@ app.use(cors(
     {
         origin: ["https://student-registration-front-end.vercel.app/"],
         methods: ["POST", "GET"],
-        credentials: false
+        credentials: true
     }
 ));
 app.use(express.json())
