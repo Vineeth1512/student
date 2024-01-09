@@ -6,19 +6,19 @@ const RegisterModel = require('./models/Register')
 const app = express()
 app.use(cors());
 
-// app.use((req, res, next) => {
-//     res.header('Access-Control-Allow-Origin', '*');
-//     res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-//     res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-//     next();
-//   });
-app.use(cors(
-    {
-        origin: ["https://student-registration-front-end.vercel.app/"],
-        methods: ["POST", "GET"],
-        credentials: false
-    }
-));
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    next();
+  });
+// app.use(cors(
+//     {
+//         origin: ["https://student-registration-front-end.vercel.app/"],
+//         methods: ["POST", "GET"],
+//         credentials: true
+//     }
+// ));
 app.use(express.json())
 
 mongoose.connect('mongodb+srv://dbUser:dbUserPassword@atlascluster.w6sb48g.mongodb.net/test?retryWrites=true&w=majority');
